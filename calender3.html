@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Page</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+    <div class="calendar-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Calendar</h2>
+            <ul>
+                <li><a href="#">List View</a></li>
+                <li><a href="#" class="active">Holidays</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Calendar Header -->
+            <div class="calendar-header">
+                <button>&lt;</button>
+                <span>July 2023</span>
+                <button>&gt;</button>
+            </div>
+
+            <!-- Weekdays -->
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+
+            <!-- Days Grid -->
+            <div class="days-grid">
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day">1</div>
+                <div class="day">2<br><button class="add-event-btn">click here</button></div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day highlighted">
+                    10<br>Anyone's Birthday
+                </div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day highlighted">
+                    20<br>Meeting @ 2:00 PM
+                </div>
+                <div class="day">21</div>
+                <div class="day highlighted">
+                    22<br>On Leave
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Adding Events -->
+    <div class="popup hidden" id="addEventPopup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h3>Add an Event</h3>
+            <form>
+                <label for="eventTitle">Title:</label>
+                <input type="text" id="eventTitle" placeholder="Event Title">
+
+                <label for="eventTime">Time:</label>
+                <input type="time" id="eventTime">
+
+                <label for="eventColor">Color:</label>
+                <select id="eventColor">
+                    <option value="yellow">Yellow</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+
+                <button type="submit">Add Event</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
